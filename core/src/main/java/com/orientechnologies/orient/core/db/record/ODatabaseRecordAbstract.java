@@ -239,6 +239,7 @@ public abstract class ODatabaseRecordAbstract extends ODatabaseWrapperAbstract<O
 
     user = null;
     level1Cache.shutdown();
+    ODatabaseRecordThreadLocal.INSTANCE.remove();
   }
 
   public ODictionary<ORecordInternal<?>> getDictionary() {
